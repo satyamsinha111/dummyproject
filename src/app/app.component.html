@@ -1,0 +1,8 @@
+<nav>
+  <a *ngIf="isLoggedIn()" routerLink="/user-profile" routerLinkActive="active" >Go to Profile</a>
+  <a routerLink="/product-list" routerLinkActive="active">View Products</a>
+  <a *ngIf="!isLoggedIn()" routerLink="/register" routerLinkActive="active" >Register</a>
+  <a *ngIf="!isLoggedIn()"  routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Login</a>
+  <a *ngIf="isLoggedIn()" (click)="logout()">Logout</a>
+</nav>
+<router-outlet></router-outlet>

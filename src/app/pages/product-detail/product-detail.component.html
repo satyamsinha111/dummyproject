@@ -1,0 +1,15 @@
+<div class="product-detail-container">
+    <div class="product-detail-header">
+      <h1>{{ product.name }}</h1>
+    </div>
+    <div class="product-detail-content">
+      <div class="product-image-container">
+        <img class="product-image" [src]="product.image?product.image:'image_not_found_placeholder.jpg'" (error)="handleImgError($event, product.image)" alt="{{ product.name }}">
+      </div>
+      <div class="product-description">
+        <p>{{ product.description }}</p>
+      </div>
+    </div>
+    
+  </div>
+  

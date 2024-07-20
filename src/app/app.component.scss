@@ -1,0 +1,28 @@
+/* Add this to your existing CSS */
+
+nav {
+    margin-top: 20px;
+    display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    margin: 0 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  nav a.active {
+    background-color: #0056b3;
+    color: white;
+  }
+  

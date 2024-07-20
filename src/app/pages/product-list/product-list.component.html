@@ -1,0 +1,19 @@
+<div class="product-list-container">
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search products..."
+        [(ngModel)]="searchTerm"
+        (input)="filterProducts()"
+      />
+    </div>
+    <div class="product-grid">
+      <div *ngFor="let product of productList" class="product-card" style="cursor: pointer" (click)="gotoProductDetail(product.id)">
+        <img [src]="product.image?product.image:'image_not_found_placeholder.jpg'" alt="{{ product.name }}" class="product-image" (error)="handleImgError($event, product.image)">
+        <h3 class="product-title">{{ product.name }}</h3>
+        <p class="product-description">{{ product.description }}</p>
+        <p class="product-price">${{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+  
